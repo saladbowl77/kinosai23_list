@@ -1,6 +1,6 @@
 <script>
 	import shopList from '../shopList.json';
-    import Card from '$lib/component/card.svelte';
+	import Card from '$lib/component/card.svelte';
 
 	let isSearch = false;
 	let searchText = '';
@@ -34,7 +34,7 @@
 	結果が見当たりません! 他のワードに変えて試してみてね!
 {:else}
 	{#each showShopList as shopData}
-        <Card shopData={shopData}/>
+		<Card {shopData} />
 	{/each}
 {/if}
 

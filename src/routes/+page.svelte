@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/environment';
 	import shopList from './shopList.json';
-    import Card from '$lib/component/card.svelte';
+	import Card from '$lib/component/card.svelte';
 
 	let isRandom = false;
 	let shownShopType = ['food', 'goods', 'special', 'fair', 'official', 'stage'];
@@ -104,7 +104,7 @@
 	データがありません
 {:else}
 	{#each showShopList as shopData}
-        <Card shopData={shopData}/>
+		<Card {shopData} />
 	{/each}
 {/if}
 
