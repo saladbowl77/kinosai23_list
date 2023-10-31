@@ -11,9 +11,8 @@
 		for (const shopData of shopList) {
 			if (!(shopData.type, shownShopType.includes(shopData.type))) continue;
 			if (isRandom) {
-                showShopList.splice(Math.floor(Math.random() * showShopList.length), 0, shopData);
-            }
-			else showShopList.push(shopData);
+				showShopList.splice(Math.floor(Math.random() * showShopList.length), 0, shopData);
+			} else showShopList.push(shopData);
 		}
 	};
 
@@ -107,7 +106,7 @@
 		<input type="checkbox" id="contentBox_{shopData.id}" class="contentBoxCB" />
 		<label class="contentBox type_{shopData.id}" for="contentBox_{shopData.id}">
 			<p class="contentBox_title">{shopData.name}</p>
-            <p>{shopData.text}</p>
+			<p>{shopData.text}</p>
 			<p>場所 : {shopData.id}</p>
 		</label>
 	{/each}
@@ -198,25 +197,30 @@
 	}
 	.contentBoxCB + label.contentBox {
 		height: 60px;
-        overflow: hidden;
-        position: relative;
+		overflow: hidden;
+		position: relative;
 	}
-    .contentBoxCB + label.contentBox::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 40px;
-        background: -moz-linear-gradient(180deg, rgba(247,247,247,0) 0%, rgba(247,247,247,1) 45%);
-        background: -webkit-linear-gradient(180deg, rgba(247,247,247,0) 0%, rgba(247,247,247,1) 45%);
-        background: linear-gradient(180deg, rgba(247,247,247,0) 0%, rgba(247,247,247,1) 45%);
-    }
+	.contentBoxCB + label.contentBox::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 100%;
+		height: 40px;
+		background: -moz-linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 1) 45%);
+		background: -webkit-linear-gradient(
+			180deg,
+			rgba(247, 247, 247, 0) 0%,
+			rgba(247, 247, 247, 1) 45%
+		);
+		background: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 1) 45%);
+	}
 	.contentBoxCB:checked + label.contentBox {
 		height: fit-content;
 	}
-    .contentBoxCB:checked + label.contentBox::after {display: none;
-    }
+	.contentBoxCB:checked + label.contentBox::after {
+		display: none;
+	}
 
 	.switch-checkbox {
 		/* display: none; */

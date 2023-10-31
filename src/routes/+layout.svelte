@@ -1,3 +1,8 @@
+<script>
+	import Analytics from '$lib/analytics.svelte';
+</script>
+
+<Analytics />
 <header>
 	<span>木野祭サーチ</span>
 </header>
@@ -6,8 +11,14 @@
 </main>
 
 <footer>
-	<a href="/">home</a>
-	<a href="/search">ワード検索</a>
+	<a href="/">
+		<img src="/icon/home.svg" alt="" />
+		<span>Home</span>
+	</a>
+	<a href="/search">
+		<img src="/icon/search.svg" alt="" />
+		<span>ワード検索</span>
+	</a>
 </footer>
 
 <style>
@@ -40,15 +51,24 @@
 		position: fixed;
 		left: 0;
 		bottom: 0;
-        background-color: #f3f3f3;
+		background-color: #f3f3f3;
 	}
 	footer a {
 		display: flex;
 
-  justify-content: center;
-  align-items: center;
+		justify-content: center;
+		align-items: center;
 		width: 50%;
-        height: 100%;
-        text-decoration: none;
+		height: 100%;
+		text-decoration: none;
+	}
+	footer a img {
+		width: 24px;
+		height: 24px;
+		margin: 0 10px 0 0;
+	}
+	footer a span {
+		font-size: 18px;
+		line-height: 18px;
 	}
 </style>
