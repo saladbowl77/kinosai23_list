@@ -1,9 +1,15 @@
 <script>
+	import Place from '$lib/component//place.svelte';
 	export let shopData = {
 		id: '',
 		type: '',
 		name: '',
-		text: ''
+		text: '',
+		map: {
+			src: '/map1.jpg',
+			x: '',
+			y: ''
+		}
 	};
 </script>
 
@@ -13,6 +19,9 @@
 		<p class="contentBox_title type_{shopData.type}">{shopData.name}</p>
 		<p>{shopData.text}</p>
 		<p>場所 : {shopData.id}</p>
+		{#if shopData.map}
+			<Place src={shopData.map.src} x={shopData.map.x} y={shopData.map.y} />
+		{/if}
 	</label>
 </div>
 

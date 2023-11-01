@@ -23,6 +23,7 @@
 
 <style>
 	header {
+		z-index: 999;
 		position: sticky;
 		background-color: #f3f3f3;
 		top: 0;
