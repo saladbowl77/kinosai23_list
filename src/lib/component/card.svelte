@@ -14,7 +14,7 @@
 </script>
 
 <div>
-	<input type="checkbox" id="contentBox_{shopData.id}" class="contentBoxCB" />
+	<input type="checkbox" id="contentBox_{shopData.id}" class="contentBoxCB" on:change={gtag('event',`click_shop_card${shopData.id}`)}/>
 	<label class="contentBox type_{shopData.type}" for="contentBox_{shopData.id}">
 		<p class="contentBox_title type_{shopData.type}">{shopData.name}</p>
 		<p>{shopData.text}</p>

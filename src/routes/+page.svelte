@@ -12,8 +12,12 @@
 		for (const shopData of shopList) {
 			if (!(shopData.type, shownShopType.includes(shopData.type))) continue;
 			if (isRandom) {
+				gtag('event','click_list_update_random');
 				showShopList.splice(Math.floor(Math.random() * showShopList.length), 0, shopData);
-			} else showShopList.push(shopData);
+			} else {
+				gtag('event',"click_list_update_category");
+				showShopList.push(shopData);
+			}
 		}
 	};
 

@@ -7,6 +7,7 @@
 	let showShopList = [];
 
 	const searchShop = () => {
+		gtag('event','click_search_shop');
 		isSearch = true;
 		showShopList = [];
 		for (const shopData of shopList) {
